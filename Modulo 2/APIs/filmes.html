@@ -2,71 +2,356 @@
 <html lang="pt-BR">
 
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double+Ink:wght@100..900&display=swap"
-        rel="stylesheet">
-    <meta charset="utf-8">
-    <title>Filmes</title>
-    <style>
-        body {
-            background-color: black;
-        }
+  <meta charset="utf-8" />
+  <title>Prime Video</title>
+  <style>
+    <!DOCTYPE html>
+<html lang="pt-BR">
 
-        h1 {
-            color: rgb(255, 0, 0);
-        }
+<head>
+  <meta charset="utf-8" />
+  <title>Prime Video</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        h2 {
-            color: aqua;
-        }
+    body {
+      background-color: #141414;
+      color: #fff;
+      font-family: 'Amazon Ember', Arial, sans-serif;
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
 
-        div {
-            flex: auto;
-            place-items: center;
-        }
+    h1 {
+      font-size: 2.2rem;
+      color: #00a8e1;
+      border-left: 6px solid #00a8e1;
+      padding-left: 12px;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
 
+    .category {
+      margin-bottom: 60px;
+    }
 
-        .bitcount-prop-double-ink {
-            font-family: "Bitcount Prop Double Ink", system-ui;
-            font-optical-sizing: auto;
-            font-weight: 400;
-            font-style: normal;
-            font-variation-settings:
-                "slnt" 0,
-                "CRSV" 0.5,
-                "ELSH" 0,
-                "ELXP" 0,
-                "SZP1" 0,
-                "SZP2" 0,
-                "XPN1" 0,
-                "XPN2" 0,
-                "YPN1" 0,
-                "YPN2" 0;
-        }
-    </style>
+    .posters {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 20px;
+    }
+
+    .poster {
+      background-color: #222;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .poster img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      border-radius: 8px 8px 0 0;
+      display: block;
+    }
+
+    .poster h2 {
+      font-size: 1rem;
+      color: #ccc;
+      padding: 10px 8px;
+      text-align: center;
+      flex-grow: 1;
+      transition: color 0.3s ease;
+    }
+
+    .poster:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px #00a8e1;
+    }
+
+    .poster:hover h2 {
+      color: #00a8e1;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8rem;
+        margin-top: 30px;
+      }
+
+      .posters {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 15px;
+      }
+
+      .poster img {
+        height: 180px;
+      }
+
+      .poster h2 {
+        font-size: 0.9rem;
+        padding: 8px 6px;
+      }
+    }
+  </style>
+</head>
 
 <body>
-    <div>
 
-    
-    <h1 class="bitcount-prop-double-ink">drama</h1>
-    <h2>Ainda Estou Aqui</h2>
-    <h2>O Poderoso Chefão</h2>
-    <h2>Ela</h2>
-    <h1 class="bitcount-prop-double-ink">comédia</h1>
-    <h2>Tempos Modernos</h2>
-    <h2>American Pie</h2>
-    <h2>Dr. Dolittle</h2>
-    <h1 class="bitcount-prop-double-ink">policial</h1>
-    <h2>O Exterminador do Futuro</h2>
-    <h2>O Procurado</h2>
-    <h2>Velozes e Furiosos</h2>
-    <h1 class="bitcount-prop-double-ink">guerra</h1>
-    <h2>Rambo</h2>
-    <h2>1917</h2>
-    <h2>Até o Último Homem</h2>
-</div>
+  <div class="category">
+    <h1>Drama</h1>
+    <div class="posters">
+      <div class="poster">
+        <img src="https://m.media-amazon.com/images/I/51f2SJzLV-L._AC_SY679_.jpg" alt="Ainda Estou Aqui" />
+        <h2>Ainda Estou Aqui</h2>
+      </div>
+      <div class="poster">
+        <img src="https://m.media-amazon.com/images/I/51D2DXF5PTL._AC_SY679_.jpg" alt="O Poderoso Chefão" />
+        <h2>O Poderoso Chefão</h2>
+      </div>
+      <div class="poster">
+        <img src="https://upload.wikimedia.org/wikipedia/pt/9/98/Ela_p%C3%B4ster.jpg" alt="Ela" />
+        <h2>Ela</h2>
+      </div>
+      <div class="poster">
+        <img src="https://upload.wikimedia.org/wikipedia/pt/c/cb/Aculpaedasestralasfilme.jpg" alt="A Culpa é Das Estrelas" />
+        <h2>A Culpa é Das Estrelas</h2>
+      </div>
+      <div class="poster">
+        <img src="https://m.media-amazon.com/images/I/61P7nK1k-AL._AC_SY679_.jpg" alt="A Última Música" />
+        <h2>A Última Música</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="category">
+    <h1>Comédia</h1>
+    <div class="posters">
+      <div class="poster">
+        <img src="https://upload.wikimedia.org/wikipedia/pt/6/6f/Modern_Times_poster.jpg" alt="Tempos Modernos" />
+        <h2>Tempos Modernos</h2>
+      </div>
+      <div class="poster">
+        <img src="https://upload.wikimedia.org/wikipedia/en/a/a9/American_Pie_film_poster.jpg" alt="American Pie" />
+        <h2>American Pie</h2>
+      </div>
+      <div class="poster">
+        <img src="https://upload.wikimedia.org/wikipedia/en/f/f9/Dr._Dolittle_%282001_film_poster%29.jpg" alt="Dr. Dolittle" />
+        <h2>Dr. Dolittle</h2>
+      </div>
+      <div class="poster">
+        <img src="https://m.media-amazon.com/images/I/91M7+2Bq0lL._AC_SY679_.jpg" alt="A Morte de Stalin" />
+        <h2>A Morte de Stalin</h2>
+      </div>
+      <div class="poster">
+        <img src="https://m.media-amazon.com/images/I/51A7IXr5ZDL._AC_SY679_.jpg" alt="Heróis Fora de Órbita" />
+        <h2>Heróis Fora de Órbita</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="category">
+    <h1>Policial</h1>
+    <div class="posters">
+      <div class="poster">
+        <img src="https://m.media-amazon.com/images/I/51yUq6+Wj+L._AC_SY679_.jpg" alt="O Exterminador do Futuro" />
+        <h2>O Exterminador do Futuro</h2>
+      </div>
+      <div class="poster">
+        <img src="https://m.media-amazon.com/images/I/51Z7f3s+5sL._AC_SY679_.jpg" alt="O Procurado" />
+        <h2>O Procurado</h2>
+      </div>
+      <div class="poster">
+        <img src="https://m.media-amazon.com/images/I/51dYQwRQoQL._AC_SY679_.jpg" alt="Velozes e Furiosos" />
+        <h2>Velozes e Furiosos</h2>
+      </div>
+      <div class="poster">
+        <img src="https://m.media-amazon.com/images/I/71wn+q0zT9L._AC_SY679_.jpg" alt="The Town" />
+        <h2>The Town</h2>
+      </div>
+      <div class="poster">
+        <img src="https://m.media-amazon.com/images/I/81j2w0mO44L._AC_SY679_.jpg" alt="Stolen" />
+        <h2>Stolen</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="category">
+    <h1>Guerra</h1>
+    <div class="posters">
+      <div class="poster">
+        <img src="https://m.media-amazon.com/images/I/81Fxnu1U8wL._AC_SY679_.jpg" alt="Rambo" />
+        <h2>Rambo</h2>
+      </div>
+      <div class="poster">
+        <img src="https://m.media-amazon.com/images/I/71j2-L29VVL._AC_SY679_.jpg" alt="1917" />
+        <h2>1917</h2>
+      </div>
+      <div class="poster">
+        <img src="https://upload.wikimedia.org/wikipedia/pt/6/6a/Até_o_último_homem_poster.jpg" alt="Até o Último Homem" />
+        <h2>Até o Último Homem</h2>
+      </div>
+      <div class="poster">
+        <img src="https://m.media-amazon.com/images/I/61qrQn5rWUL._AC_SY679_.jpg" alt="Pecados de Guerra" />
+        <h2>Pecados de Guerra</h2>
+      </div>
+      <div class="poster">
+        <img src="https://upload.wikimedia.org/wikipedia/pt/7/7b/Queda%2C_a_filme.jpg" alt="A Queda" />
+        <h2>A Queda</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="category">
+    <h1>Ação</h1>
+    <div class="posters">
+      <div class="poster">
+        <img src="https://upload.wikimedia.org/wikipedia/pt/8/88/The_Dark_Knight.jpg" alt="Batman o Cavaleiro das Trevas" />
+        <h2>Batman o Cavaleiro das Trevas</h2>
+      </div>
+      <div class="poster">
+        <img src="https://upload.wikimedia.org/wikipedia/pt/c/c3/Batman_%281989%29_poster.jpg" alt="Batman" />
+        <h2>Batman</h2>
+      </div>
+      <div class="poster">
+        <img src="https://upload.wikimedia.org/wikipedia/en/9/9f/Batman_and_Robin_poster.jpg" alt="Batman e Robin" />
+        <h2>Batman e Robin</h2>
+      </div>
+      <div class="poster">
+        <img src="https://m.media-amazon.com/images/I/71UEsE2LnHL._AC_SY679_.jpg" alt="Batman vs Duas Caras" />
+        <h2>Batman vs Duas Caras</h2>
+      </div>
+      <div class="poster">
+        <img src="https://upload.wikimedia.org/wikipedia/en/8/83/Batman_Begins_Poster.jpg" alt="Batman Begins" />
+        <h2>Batman Begins</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="category">
+    <h1>Terror</h1>
+    <div class="posters">
+      <div class="poster">
+        <img src="https://upload.wikimedia.org/wikipedia/en/f/f9/Terrifier_2016_film_poster.jpg" alt="Terrifier" />
+        <h2>Terrifier</h2>
+      </div>
+      <div class="poster">
+        <img src="https://upload.wikimedia.org/wikipedia/en/9/90/Terrifier_2_film_poster.jpg" alt="Terrifier 2" />
+        <h2>Terrifier 2</h2>
+      </div>
+      <div class="poster">
+        <img src="https://m.media-amazon.com/images/I/71wZ7y94tgL._AC_SY679_.jpg" alt="Terrifier O Início" />
+        <h2>Terrifier O Início</h2>
+      </div>
+      <div class="poster">
+        <img src="https://m.media-amazon.com/images/I/71sO1qXs3FL._AC_SY679_.jpg" alt="Terrifier 3" />
+        <h2>Terrifier 3</h2>
+      </div>
+      <div class="poster">
+        <img src="https://m.media-amazon.com/images/I/71nxJq0SrNL._AC_SY679_.jpg" alt="Ursinho Pooh, Sangue e Mel" />
+        <h2>Ursinho Pooh, Sangue e Mel</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="category">
+    <h1>Shows</h1>
+    <div class="posters">
+      <div class="poster">
+        <img src="https://images.sr.roku.com/idType/roku/context/global/id/f3eb5c2abb4a5064ab3c270786b1057b/images/gracenote/assets/p12892973_b_v11_aa.jpg/magic/396x0/filters:quality(70)" alt="Kiss Rocks Vegas" />
+        <h2>Kiss Rocks Vegas</h2>
+      </div>
+      <div class="poster">
+        <img src="https://iscale.iheart.com/catalog/album/33310713" alt="AC/DC Live At River Plate" />
+        <h2>AC/DC Live At River Plate</h2>
+      </div>
+      <div class="poster">
+        <img src="https://images.genius.com/752ba5ff61c3bdd8e41fec9280e9f7f3.726x1000x1.jpg" alt="Black Sabbath (2014)" />
+        <h2>Black Sabbath (2014)</h2>
+      </div>
+      <div class="poster">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.zpeXFGYbzyBjGIEEDp3rrgHaKA?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Kiss 2020 Goodbye Live Dubai" />
+        <h2>Kiss 2020 Goodbye Live Dubai</h2>
+      </div>
+      <div class="poster">
+        <img src="https://i.etsystatic.com/27309297/r/il/7e5885/3150208083/il_fullxfull.3150208083_1oq5.jpg" alt="Iron Maiden Live Rock In Rio 2019" />
+        <h2>Iron Maiden Live Rock In Rio 2019</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="category">
+    <h1>Luta Livre</h1>
+    <div class="posters">
+      <div class="poster">
+        <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/9/97/WWE_logo.svg/1200px-WWE_logo.svg.png" alt="WWE" />
+        <h2>WWE</h2>
+      </div>
+      <div class="poster">
+        <img src="https://upload.wikimedia.org/wikipedia/pt/6/6c/WWE_SmackDown_logo.png" alt="SmackDown" />
+        <h2>SmackDown</h2>
+      </div>
+      <div class="poster">
+        <img src="https://upload.wikimedia.org/wikipedia/pt/8/82/WWE_Raw_logo.svg" alt="Raw" />
+        <h2>Raw</h2>
+      </div>
+      <div class="poster">
+        <img src="https://m.media-amazon.com/images/I/71ThEZsNPLS._AC_SY679_.jpg" alt="Survivor Series" />
+        <h2>Survivor Series</h2>
+      </div>
+      <div class="poster">
+        <img src="https://upload.wikimedia.org/wikipedia/pt/1/13/WrestleMania_logo.svg" alt="Wrestlemania" />
+        <h2>Wrestlemania</h2>
+      </div>
+      <div class="poster">
+        <img src="https://upload.wikimedia.org/wikipedia/pt/9/91/Summerslam_Logo_2012.png" alt="SummerSlam" />
+        <h2>SummerSlam</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="category">
+    <h1>Trapalhadas, Infantil</h1>
+    <div class="posters">
+      <div class="poster">
+        <img src="https://upload.wikimedia.org/wikipedia/en/6/6a/Tom_and_Jerry_%281941_film%29_poster.jpg" alt="Tom E Jerry" />
+        <h2>Tom E Jerry</h2>
+      </div>
+      <div class="poster">
+        <img src="https://upload.wikimedia.org/wikipedia/en/4/43/Scooby-Doo_%281960s%29.png" alt="Scooby-doo" />
+        <h2>Scooby-doo</h2>
+      </div>
+      <div class="poster">
+        <img src="https://upload.wikimedia.org/wikipedia/en/1/15/Looney_Tunes_Logo.svg" alt="Looney Tunes" />
+        <h2>Looney Tunes</h2>
+      </div>
+      <div class="poster">
+        <img src="https://upload.wikimedia.org/wikipedia/en/7/7c/Pink_Panther_logo.svg" alt="A Pantera Cor De Rosa" />
+        <h2>A Pantera Cor De Rosa</h2>
+      </div>
+      <div class="poster">
+        <img src="https://upload.wikimedia.org/wikipedia/en/0/02/Simpsons_FamilyPicture.png" alt="Os Simpsons" />
+        <h2>Os Simpsons</h2>
+      </div>
+    </div>
+  </div>
+
 </body>
 
 </html>
+
+
+</style>

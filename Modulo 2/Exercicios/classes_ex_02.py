@@ -1,6 +1,6 @@
 from clases_ex_01 import AnimaisMarinhos
 
-animal=AnimaisMarinhos(False, "Estrela-do-Mar" , "Patrick Estrela", "Macho")
+animal=AnimaisMarinhos(False, "Estrela-do-Mar" , "Patrick Estrela", "Macho",)
 animal.nadar_sem_lixo()
 
 animal=AnimaisMarinhos(False, "Lula" , "Mike", "Macho")

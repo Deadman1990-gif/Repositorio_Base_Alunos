@@ -1,0 +1,11 @@
+from classepai_personagem import Personagem
+personagem1=Personagem("Rick", "O Show De Tom E Jerry", 1.60, "90kg", "bege")
+personagem1.andar()
+personagem2=Personagem("Ginger", "O Show De Tom E Jerry", 1.55, "75kg", "rosa")
+personagem2.beber()
+personagem3=Personagem("Rildy", "O Showx De Tom E Jerry", 1.60, "100kg", "Verde")
+personagem3.brincar()
+personagem4=Personagem("Spike", "O Show De Tom E Jerry", 1.09, "90kg", "Bege")
+personagem4.comer()
+personagem5=Personagem("Butch", "O Show De Tom E Jerry", 1.07, "50kg", "Preto")
+personagem5.falar()

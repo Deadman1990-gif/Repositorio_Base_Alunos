@@ -1,4 +1,4 @@
-class passaro():
+class Passaro():
 
     def __init__(self, habitat, tamanho, cores, especie, sexo): 
         self.tamanho=tamanho
@@ -12,27 +12,29 @@ class passaro():
     
     def voar(self):
         return print("Batendo as asas e: voando...")
+    
+    def fazer_som(self):
+        return print(f"{self.especie} esta fazendo barulho")
 
-passaro1=passaro(0.14, ['Preto', 'Branco', 'Cinza'], 'Pardal', 'M', 'Floresta Amazônica')
+passaro1=Passaro(0.14, ['Preto', 'Branco', 'Cinza'], 'Pardal', 'M', 'Floresta Amazônica')
 passaro1.cantar()
 passaro1.voar()
-passaro1.habitat()
+passaro1.fazer_som()
 
-passaro2=passaro(0.35, ['Preto', 'Cinza'], 'corvo', 'M', 'Cemitério')
+passaro2=Passaro(0.35, ['Preto', 'Cinza'], 'corvo', 'M', 'Cemitério')
 passaro2.cantar()
 passaro2.voar()
-passaro2.habitat()
+passaro2.fazer_som
 
-passaro3=passaro(0.55, ['Azul', 'Branco', 'Amarelo'], 'Arara', 'M', 'Rio de Janeiro')
+passaro3=Passaro(0.55, ['Azul', 'Branco', 'Amarelo'], 'Arara', 'M', 'Rio de Janeiro')
 passaro3.cantar()
 passaro3.voar()
-passaro3.habitat()
+passaro3.fazer_som()
 
-passaro4=passaro(0.45, ['Marrom', 'Preto', 'Cinza'], 'Pombo', 'M', 'Ruas de São Paulo')
+passaro4=Passaro(0.45, ['Marrom', 'Preto', 'Cinza'], 'Pombo', 'M', 'Ruas de São Paulo')
 passaro4.cantar()
 passaro4.voar()
-passaro4.habitat()
-
+passaro4.fazer_som()
 
     
     

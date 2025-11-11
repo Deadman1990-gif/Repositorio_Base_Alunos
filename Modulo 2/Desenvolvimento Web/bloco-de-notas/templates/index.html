@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloco de Notas do Pedro</title>
+    <style>
+        /* ======= Estilo do Bloco de Notas ======= */
+body {
+    background: #f7f9fb;
+    font-family: "Segoe UI", Roboto, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+div {
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 30px 40px;
+    width: 400px;
+}
+
+/* ======= Lista de Notas ======= */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+li {
+    background: #e8f0fe;
+    color: #333;
+    padding: 10px 12px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+li:hover {
+    background: #d2e3fc;
+}
+
+/* ======= Formulário ======= */
+form {
+    display: flex;
+    gap: 10px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px 12px;
+    border: 2px solid #d0d7de;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #1a73e8;
+    box-shadow: 0 0 4px rgba(26, 115, 232, 0.4);
+}
+
+input[type="submit"] {
+    background: #1a73e8;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.1s;
+}
+
+input[type="submit"]:hover {
+    background: #155ab6;
+}
+
+input[type="submit"]:active {
+    transform: scale(0.97);
+}
+        
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            {% for item in notas %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+        <form action="/" method="POST">
+            <input type="text" placeholder="Escreva a sua anotação" id="nota", name="nota">
+            <input type="submit" value="SALVAR">
+        </form>
+    </div>
+</body>
+</html>
